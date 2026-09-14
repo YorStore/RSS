@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
 <title>Riffa Self Store — Secure self storage units, Pool-in-Wharfedale near Otley</title>
 <meta name="description" content="Secure, flexible, convenient indoor self storage at Riffa Business Park, Pool-in-Wharfedale near Otley. Units from GBP16 per week. Message us on WhatsApp or send an enquiry.">
 
@@ -74,6 +75,17 @@
     font-size:.68rem;letter-spacing:.2em;color:var(--sage);
     text-transform:uppercase;margin-top:14px;
   }
+  /* iOS Safari auto-links anything that looks like a phone number and
+     paints it blue - force every link in the strap to stay on brand */
+  .topbar .strap a,
+  .topbar .strap a:link,
+  .topbar .strap a:visited,
+  .topbar .strap a:hover,
+  .topbar .strap a:active{
+    color:var(--sage);text-decoration:none;
+  }
+  .topbar .strap a:hover{text-decoration:underline}
+  .topbar .strap a:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
 
   /* ---- Hero with photographic backdrop ---- */
   .hero{
@@ -211,7 +223,7 @@
         <div class="sub">&mdash; SELF STORE &mdash;</div>
       </div>
     </a>
-    <div class="strap">Pool-in-Wharfedale &nbsp;&middot;&nbsp; 07404 936091</div>
+    <div class="strap">Pool-in-Wharfedale &nbsp;&middot;&nbsp; <a href="tel:+447404936091">07404 936091</a></div>
   </div>
 </div>
 
